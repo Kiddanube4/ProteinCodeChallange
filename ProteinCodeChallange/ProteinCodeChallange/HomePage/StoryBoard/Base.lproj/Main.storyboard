@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Tn-N5-n3x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dad-AH-BCL">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="kU7-AE-301">
+            <objects>
+                <navigationController id="dad-AH-BCL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X9c-wJ-8Ok">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2Tn-N5-n3x" kind="relationship" relationship="rootViewController" id="gQC-Rj-eEK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jo7-3d-gbb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1571" y="-10"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="KuQ-2B-NoG">
             <objects>
@@ -17,13 +33,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBE-uP-6X6">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qx-Kw-VwJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1138.6666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1072.6666666666667"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uav-EK-are">
-                                                <rect key="frame" x="39.333333333333343" y="129.66666666666663" width="314.33333333333326" height="500"/>
+                                                <rect key="frame" x="39.333333333333343" y="107.66666666666663" width="314.33333333333326" height="500"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Csg-k8-yNC" customClass="LoginTF" customModule="ProteinCodeChallange" customModuleProvider="target">
                                                         <rect key="frame" x="49.999999999999986" y="100.00000000000003" width="214.33333333333331" height="34"/>
@@ -93,6 +109,7 @@
                             <constraint firstItem="bBE-uP-6X6" firstAttribute="top" secondItem="hkm-a5-WMK" secondAttribute="top" id="oFZ-Uu-Tpj"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ODm-Fm-tSV"/>
                     <connections>
                         <outlet property="btnLogin" destination="eqj-5V-Rse" id="Fe2-vG-XsU"/>
                         <outlet property="loginElementContainerView" destination="uav-EK-are" id="sUe-eg-oay"/>
@@ -102,7 +119,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLJ-iS-x7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129.00763358778624" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="-218" y="-1"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="a7p-9j-AsN">
+            <objects>
+                <viewController id="RK8-Y4-AhU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="70E-Ih-0va">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Y3O-DB-Nct"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5j0-Ky-2Ub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="634" y="4"/>
         </scene>
     </scenes>
     <designables>
