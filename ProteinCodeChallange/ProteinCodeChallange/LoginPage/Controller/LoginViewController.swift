@@ -66,7 +66,9 @@ extension LoginViewController: LoginViewModelDelegate {
     }
     
     func login() {
-        print("success")
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let homePageviewController = storyBoard.instantiateViewController(withIdentifier: "HomePageViewController") as! HomePageViewController
+        navigationController?.pushViewController(homePageviewController, animated: true)
     }
     
     
