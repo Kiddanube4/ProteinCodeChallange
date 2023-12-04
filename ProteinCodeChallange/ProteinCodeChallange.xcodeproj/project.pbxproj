@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4AB7CF6417C0E92C3A583F2D /* Pods_ProteinCodeChallange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E22288A9B9677CDA6D88CEC2 /* Pods_ProteinCodeChallange.framework */; };
 		9D39182E2B1DFBD600F63004 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D39182D2B1DFBD600F63004 /* AppDelegate.swift */; };
 		9D3918302B1DFBD600F63004 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D39182F2B1DFBD600F63004 /* SceneDelegate.swift */; };
 		9D3918322B1DFBD600F63004 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3918312B1DFBD600F63004 /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		9D3918362B1DFBD700F63004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D3918392B1DFBD700F63004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D39183B2B1DFBD700F63004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5D1DEB40F9E25B2208F8EAF /* Pods-ProteinCodeChallange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProteinCodeChallange.release.xcconfig"; path = "Target Support Files/Pods-ProteinCodeChallange/Pods-ProteinCodeChallange.release.xcconfig"; sourceTree = "<group>"; };
+		E22288A9B9677CDA6D88CEC2 /* Pods_ProteinCodeChallange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProteinCodeChallange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3999B11D5E70DF909C90439 /* Pods-ProteinCodeChallange.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProteinCodeChallange.debug.xcconfig"; path = "Target Support Files/Pods-ProteinCodeChallange/Pods-ProteinCodeChallange.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AB7CF6417C0E92C3A583F2D /* Pods_ProteinCodeChallange.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BCAC833BF7348C2D8F593A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E22288A9B9677CDA6D88CEC2 /* Pods_ProteinCodeChallange.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9D3918212B1DFBD600F63004 = {
 			isa = PBXGroup;
 			children = (
 				9D39182C2B1DFBD600F63004 /* ProteinCodeChallange */,
 				9D39182B2B1DFBD600F63004 /* Products */,
+				C18AFFDE1B8150770CE8C370 /* Pods */,
+				5BCAC833BF7348C2D8F593A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = ProteinCodeChallange;
 			sourceTree = "<group>";
 		};
+		C18AFFDE1B8150770CE8C370 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3999B11D5E70DF909C90439 /* Pods-ProteinCodeChallange.debug.xcconfig */,
+				A5D1DEB40F9E25B2208F8EAF /* Pods-ProteinCodeChallange.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D39183E2B1DFBD700F63004 /* Build configuration list for PBXNativeTarget "ProteinCodeChallange" */;
 			buildPhases = (
+				2C6F45B465C8C9FE58E9A0C9 /* [CP] Check Pods Manifest.lock */,
 				9D3918262B1DFBD600F63004 /* Sources */,
 				9D3918272B1DFBD600F63004 /* Frameworks */,
 				9D3918282B1DFBD600F63004 /* Resources */,
+				84EE1A06A4AF971441D94A2D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C6F45B465C8C9FE58E9A0C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ProteinCodeChallange-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84EE1A06A4AF971441D94A2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ProteinCodeChallange/Pods-ProteinCodeChallange-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ProteinCodeChallange/Pods-ProteinCodeChallange-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ProteinCodeChallange/Pods-ProteinCodeChallange-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9D3918262B1DFBD600F63004 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		9D39183F2B1DFBD700F63004 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3999B11D5E70DF909C90439 /* Pods-ProteinCodeChallange.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		9D3918402B1DFBD700F63004 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5D1DEB40F9E25B2208F8EAF /* Pods-ProteinCodeChallange.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
