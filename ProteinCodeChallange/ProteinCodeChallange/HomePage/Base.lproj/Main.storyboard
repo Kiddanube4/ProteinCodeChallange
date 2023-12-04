@@ -1,24 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Tn-N5-n3x">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Login View Controller-->
+        <scene sceneID="KuQ-2B-NoG">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="2Tn-N5-n3x" customClass="LoginViewController" customModule="ProteinCodeChallange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pl4-O6-xS1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBE-uP-6X6">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qx-Kw-VwJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1138.6666666666667"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uav-EK-are">
+                                                <rect key="frame" x="39.333333333333343" y="129.66666666666663" width="314.33333333333326" height="500"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Csg-k8-yNC" customClass="LoginTF" customModule="ProteinCodeChallange" customModuleProvider="target">
+                                                        <rect key="frame" x="49.999999999999986" y="100.00000000000003" width="214.33333333333331" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acS-sB-9q3" customClass="LoginTF" customModule="ProteinCodeChallange" customModuleProvider="target">
+                                                        <rect key="frame" x="49.999999999999986" y="180.00000000000003" width="214.33333333333331" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqj-5V-Rse">
+                                                        <rect key="frame" x="29.999999999999986" y="345" width="254.33333333333331" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="lzi-Uh-Ea0"/>
+                                                        </constraints>
+                                                        <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Giriş"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="500" id="0m3-wo-RTs"/>
+                                                    <constraint firstItem="Csg-k8-yNC" firstAttribute="top" secondItem="uav-EK-are" secondAttribute="top" constant="100" id="592-WT-LOr"/>
+                                                    <constraint firstAttribute="trailing" secondItem="eqj-5V-Rse" secondAttribute="trailing" constant="30" id="6on-ys-t1X"/>
+                                                    <constraint firstItem="acS-sB-9q3" firstAttribute="top" secondItem="Csg-k8-yNC" secondAttribute="bottom" constant="46" id="Dqv-1P-U0W"/>
+                                                    <constraint firstItem="acS-sB-9q3" firstAttribute="leading" secondItem="uav-EK-are" secondAttribute="leading" constant="50" id="Jcu-Hk-YIe"/>
+                                                    <constraint firstItem="Csg-k8-yNC" firstAttribute="leading" secondItem="uav-EK-are" secondAttribute="leading" constant="50" id="RYk-ao-Ow0"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Csg-k8-yNC" secondAttribute="trailing" constant="50" id="SzQ-vg-3Pm"/>
+                                                    <constraint firstItem="eqj-5V-Rse" firstAttribute="leading" secondItem="uav-EK-are" secondAttribute="leading" constant="30" id="V5l-J1-t25"/>
+                                                    <constraint firstAttribute="trailing" secondItem="acS-sB-9q3" secondAttribute="trailing" constant="50" id="WDe-4F-mrY"/>
+                                                    <constraint firstItem="eqj-5V-Rse" firstAttribute="centerX" secondItem="acS-sB-9q3" secondAttribute="centerX" id="dJA-eJ-6jU"/>
+                                                    <constraint firstItem="acS-sB-9q3" firstAttribute="centerX" secondItem="Csg-k8-yNC" secondAttribute="centerX" id="hK1-5q-dGo"/>
+                                                    <constraint firstItem="eqj-5V-Rse" firstAttribute="top" secondItem="acS-sB-9q3" secondAttribute="bottom" constant="131" id="rzK-gO-fqk"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="uav-EK-are" firstAttribute="centerX" secondItem="0qx-Kw-VwJ" secondAttribute="centerX" id="qZY-9u-ZCV"/>
+                                            <constraint firstItem="uav-EK-are" firstAttribute="width" secondItem="0qx-Kw-VwJ" secondAttribute="width" multiplier="0.8" id="xMA-cX-wrP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0qx-Kw-VwJ" firstAttribute="height" secondItem="bBE-uP-6X6" secondAttribute="height" multiplier="1.5" id="0fH-4Y-y0v"/>
+                                    <constraint firstItem="0qx-Kw-VwJ" firstAttribute="top" secondItem="bBE-uP-6X6" secondAttribute="top" id="Ehu-di-hBq"/>
+                                    <constraint firstItem="0qx-Kw-VwJ" firstAttribute="width" secondItem="bBE-uP-6X6" secondAttribute="width" id="T7g-FS-9QJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="0qx-Kw-VwJ" secondAttribute="trailing" id="Wop-t1-tnv"/>
+                                    <constraint firstItem="0qx-Kw-VwJ" firstAttribute="leading" secondItem="bBE-uP-6X6" secondAttribute="leading" id="iYU-CG-P3V"/>
+                                    <constraint firstItem="uav-EK-are" firstAttribute="centerY" secondItem="bBE-uP-6X6" secondAttribute="centerY" id="pFf-8m-mbX"/>
+                                    <constraint firstAttribute="bottom" secondItem="0qx-Kw-VwJ" secondAttribute="bottom" id="sxK-5x-wRG"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hkm-a5-WMK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hkm-a5-WMK" firstAttribute="trailing" secondItem="bBE-uP-6X6" secondAttribute="trailing" id="1Z1-vM-2Ip"/>
+                            <constraint firstItem="hkm-a5-WMK" firstAttribute="bottom" secondItem="bBE-uP-6X6" secondAttribute="bottom" id="GOU-J8-CRf"/>
+                            <constraint firstItem="bBE-uP-6X6" firstAttribute="leading" secondItem="hkm-a5-WMK" secondAttribute="leading" id="gAl-R6-L2R"/>
+                            <constraint firstItem="bBE-uP-6X6" firstAttribute="top" secondItem="hkm-a5-WMK" secondAttribute="top" id="oFZ-Uu-Tpj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnLogin" destination="eqj-5V-Rse" id="Fe2-vG-XsU"/>
+                        <outlet property="loginElementContainerView" destination="uav-EK-are" id="sUe-eg-oay"/>
+                        <outlet property="passWordTextField" destination="acS-sB-9q3" id="PB1-cX-OwN"/>
+                        <outlet property="userNametextField" destination="Csg-k8-yNC" id="d2S-BG-iCU"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZLJ-iS-x7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="129.00763358778624" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Csg-k8-yNC">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

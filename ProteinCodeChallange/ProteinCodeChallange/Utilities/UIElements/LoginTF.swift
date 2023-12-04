@@ -24,7 +24,7 @@ class LoginTF: UITextField {
     }
     
     
-    @IBInspectable var topLabelTextColor: UIColor = .red {
+    @IBInspectable var topLabelTextColor: UIColor = .black {
         didSet {
             topLabel.textColor = topLabelTextColor
             
@@ -122,6 +122,7 @@ class LoginTF: UITextField {
     private func setupTextField() {
         self.borderStyle = .roundedRect
         setupTopLabel()
+        setupErrorLabel()
    
     }
     
@@ -129,10 +130,24 @@ class LoginTF: UITextField {
         
         addSubview(topLabel)
                 NSLayoutConstraint.activate([
-                    topLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
-                    topLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+                    topLabel.bottomAnchor.constraint(equalTo: self.topAnchor, constant: -5),
+                    topLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 3),
                     topLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
-                    topLabel.heightAnchor.constraint(equalToConstant: 20) // Adjust the height as needed
+             
+                ])
+                
+     
+        
+    }
+    
+    private func setupErrorLabel() {
+        
+        addSubview(errorLabel)
+                NSLayoutConstraint.activate([
+                    errorLabel.topAnchor.constraint(equalTo: self.bottomAnchor, constant: 5),
+                    errorLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 3),
+                    errorLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+             
                 ])
                 
      
