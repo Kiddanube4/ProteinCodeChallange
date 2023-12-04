@@ -52,20 +52,19 @@ class LoginViewModel {
     }
     
     
-    func login(userName: String, passWord:String)-> UIViewController? {
+    func login(userName: String, passWord:String) {
         let userCheckQuery = realm?.objects(User.self).filter("userName == %@ AND passWord == %@", userName, passWord)
 
         // Access the first user with the specified username (if it exists)
         if let user = userCheckQuery?.first {
             // Access user properties
             loginDelegate?.login()
-            let homePageController =
         } else {
             loginDelegate?.login(didFailWithError: "Kullanıcı adı veya şifre hatalı")
-            return nil
+
         }
         
-        return nil
+ 
     }
     
     

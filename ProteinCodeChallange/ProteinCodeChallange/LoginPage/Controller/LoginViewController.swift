@@ -29,6 +29,22 @@ class LoginViewController: UIViewController {
         guard let userName = userNametextField.text,
               let passWord = passWordTextField.text else {return}
         
+        if userName == "" {
+            userNametextField.isErrorLabelHidden = false
+            userNametextField.errorLabeltext = "Kullanıcı adı boş olamaz"
+            return
+        }else {
+            userNametextField.isErrorLabelHidden = true
+        }
+        
+        if passWord == "" {
+            passWordTextField.isErrorLabelHidden = false
+            passWordTextField.errorLabeltext = "Şifre boş olamaz"
+            return
+        }else {
+            passWordTextField.isErrorLabelHidden = true
+        }
+        
         viewModel.login(userName: userName, passWord: passWord)
     }
     
