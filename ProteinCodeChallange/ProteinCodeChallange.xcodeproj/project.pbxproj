@@ -16,6 +16,7 @@
 		9D985DED2B1E086F005FD14F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D985DEC2B1E086F005FD14F /* LoginViewController.swift */; };
 		9D985DEF2B1E0883005FD14F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D985DEE2B1E0883005FD14F /* LoginViewModel.swift */; };
 		9D985DF32B1E0DD0005FD14F /* LoginTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D985DF22B1E0DD0005FD14F /* LoginTF.swift */; };
+		9DB0264F2B1E25C200834C5E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB0264E2B1E25C200834C5E /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		9D985DEC2B1E086F005FD14F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9D985DEE2B1E0883005FD14F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9D985DF22B1E0DD0005FD14F /* LoginTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTF.swift; sourceTree = "<group>"; };
+		9DB0264E2B1E25C200834C5E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A5D1DEB40F9E25B2208F8EAF /* Pods-ProteinCodeChallange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProteinCodeChallange.release.xcconfig"; path = "Target Support Files/Pods-ProteinCodeChallange/Pods-ProteinCodeChallange.release.xcconfig"; sourceTree = "<group>"; };
 		E22288A9B9677CDA6D88CEC2 /* Pods_ProteinCodeChallange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProteinCodeChallange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3999B11D5E70DF909C90439 /* Pods-ProteinCodeChallange.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProteinCodeChallange.debug.xcconfig"; path = "Target Support Files/Pods-ProteinCodeChallange/Pods-ProteinCodeChallange.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		9D985DE32B1E0676005FD14F /* LoginPage */ = {
 			isa = PBXGroup;
 			children = (
+				9DB0264D2B1E25B400834C5E /* Model */,
 				9D985DEB2B1E0843005FD14F /* ViewModel */,
 				9D985DEA2B1E083E005FD14F /* Controller */,
 			);
@@ -150,6 +153,14 @@
 				9D985DF22B1E0DD0005FD14F /* LoginTF.swift */,
 			);
 			path = UIElements;
+			sourceTree = "<group>";
+		};
+		9DB0264D2B1E25B400834C5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9DB0264E2B1E25C200834C5E /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C18AFFDE1B8150770CE8C370 /* Pods */ = {
@@ -278,6 +289,7 @@
 			files = (
 				9D985DF32B1E0DD0005FD14F /* LoginTF.swift in Sources */,
 				9D985DEF2B1E0883005FD14F /* LoginViewModel.swift in Sources */,
+				9DB0264F2B1E25C200834C5E /* User.swift in Sources */,
 				9D985DED2B1E086F005FD14F /* LoginViewController.swift in Sources */,
 				9D39182E2B1DFBD600F63004 /* AppDelegate.swift in Sources */,
 				9D3918302B1DFBD600F63004 /* SceneDelegate.swift in Sources */,

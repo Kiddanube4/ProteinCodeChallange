@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
                             userNameTF: userNametextField,
                             passWordTF: passWordTextField,
                             containerView: loginElementContainerView)
+        viewModel.loginDelegate = self
 
     }
     
@@ -33,4 +34,18 @@ class LoginViewController: UIViewController {
     
 
  
+}
+
+
+extension LoginViewController: LoginViewModelDelegate {
+    func login(didFailWithError: String) {
+        print(didFailWithError)
+    }
+    
+    func login() {
+        print("success")
+    }
+    
+    
+    
 }
