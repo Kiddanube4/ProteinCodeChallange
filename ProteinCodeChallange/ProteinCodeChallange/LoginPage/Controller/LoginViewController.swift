@@ -55,7 +55,14 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginViewModelDelegate {
     func login(didFailWithError: String) {
-        print(didFailWithError)
+        let actionSheet = UIAlertController(title: "Hata !", message: didFailWithError, preferredStyle: .actionSheet)
+        present(actionSheet, animated: true) {
+         let timer =  Timer(timeInterval: 0.8, repeats: false) { _ in
+                self.dismiss(animated: true)
+            }
+            timer.fire()
+        }
+        
     }
     
     func login() {

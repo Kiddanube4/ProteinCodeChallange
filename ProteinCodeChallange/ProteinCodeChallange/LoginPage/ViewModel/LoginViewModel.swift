@@ -20,14 +20,30 @@ class LoginViewModel {
     let realm: Realm?
     var loginDelegate: LoginViewModelDelegate?
     init() {
+        let config = Realm.Configuration(
+            schemaVersion: 3, // Increment the schema version to trigger a migration
+            migrationBlock: { migration, oldSchemaVersion in
+                if oldSchemaVersion < 1 {
+                    // Add the primary key to the 'User' class
+                    migration.enumerateObjects(ofType: User.className()) { oldObject, newObject in
+                        newObject?["userName"] = "" // Set the default value for the new primary key
+                    }
+                }
+            })
+        // Apply the new configuration
+        Realm.Configuration.defaultConfiguration = config
         realm = try! Realm()
         for (index, usernama) in userNames.enumerated() {
             let passWord = passwords[index]
             let newUser = User(username: usernama, password: passWord)
+            if  !doesUserExist(with: usernama) {
+                try! realm?.write({
+                    realm?.add(newUser)
+                })
+            }else {
+                print("user exists")
+            }
             
-            try! realm?.write({
-                realm?.add(newUser)
-            })
         }
      
     }
@@ -65,6 +81,11 @@ class LoginViewModel {
         }
         
  
+    }
+    
+    private func doesUserExist(with userName: String) -> Bool {
+        let realm = try! Realm()
+        return realm.objects(User.self).filter("userName == %@", userName).count > 0
     }
     
     
