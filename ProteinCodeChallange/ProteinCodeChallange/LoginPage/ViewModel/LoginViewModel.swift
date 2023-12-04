@@ -22,10 +22,17 @@ class LoginViewModel {
         
         userNameTF.isErrorLabelHidden = true
         passWordTF.isErrorLabelHidden = true
+        passWordTF.isSecureTextEntry = true
         
         userNameTF.topLabelText = "Kullanıcı Adı: "
         passWordTF.topLabelText = "Şifre: "
         
+    }
+    
+    
+    func login(userName: String, passWord:String) {
+        
+        print("did login with \(userName) and \(passWord)")
     }
     
     

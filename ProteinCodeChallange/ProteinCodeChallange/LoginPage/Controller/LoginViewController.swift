@@ -21,10 +21,15 @@ class LoginViewController: UIViewController {
                             passWordTF: passWordTextField,
                             containerView: loginElementContainerView)
 
-        // Do any additional setup after loading the view.
     }
     
 
+    @IBAction func loginAction(_ sender: UIButton) {
+        guard let userName = userNametextField.text,
+              let passWord = passWordTextField.text else {return}
+        
+        viewModel.login(userName: userName, passWord: passWord)
+    }
     
 
  

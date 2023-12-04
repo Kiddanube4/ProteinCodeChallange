@@ -101,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				9D985DE62B1E068E005FD14F /* StoryBoard */,
-				9D3918332B1DFBD600F63004 /* Main.storyboard */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -116,6 +115,7 @@
 		9D985DE62B1E068E005FD14F /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				9D3918332B1DFBD600F63004 /* Main.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";

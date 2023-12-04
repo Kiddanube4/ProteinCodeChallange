@@ -44,6 +44,9 @@
                                                         <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Giriş"/>
+                                                        <connections>
+                                                            <action selector="loginAction:" destination="2Tn-N5-n3x" eventType="touchUpInside" id="0Uj-Ry-6Ld"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
