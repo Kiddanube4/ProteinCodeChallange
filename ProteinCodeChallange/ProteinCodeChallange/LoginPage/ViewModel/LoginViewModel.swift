@@ -25,7 +25,7 @@ class LoginViewModel {
             migrationBlock: { migration, oldSchemaVersion in
                 if oldSchemaVersion < 1 {
                     // Add the primary key to the 'User' class
-                    migration.enumerateObjects(ofType: User.className()) { oldObject, newObject in
+                    migration.enumerateObjects(ofType: Member.className()) { oldObject, newObject in
                         newObject?["userName"] = "" // Set the default value for the new primary key
                     }
                 }
@@ -35,7 +35,7 @@ class LoginViewModel {
         realm = try! Realm()
         for (index, usernama) in userNames.enumerated() {
             let passWord = passwords[index]
-            let newUser = User(username: usernama, password: passWord)
+            let newUser = Member(username: usernama, password: passWord)
             if  !doesUserExist(with: usernama) {
                 try! realm?.write({
                     realm?.add(newUser)
@@ -69,7 +69,7 @@ class LoginViewModel {
     
     
     func login(userName: String, passWord:String) {
-        let userCheckQuery = realm?.objects(User.self).filter("userName == %@ AND passWord == %@", userName, passWord)
+        let userCheckQuery = realm?.objects(Member.self).filter("userName == %@ AND passWord == %@", userName, passWord)
 
         // Access the first user with the specified username (if it exists)
         if let user = userCheckQuery?.first {
@@ -85,7 +85,7 @@ class LoginViewModel {
     
     private func doesUserExist(with userName: String) -> Bool {
         let realm = try! Realm()
-        return realm.objects(User.self).filter("userName == %@", userName).count > 0
+        return realm.objects(Member.self).filter("userName == %@", userName).count > 0
     }
     
     

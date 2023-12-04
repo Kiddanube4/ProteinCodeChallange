@@ -12,10 +12,8 @@ class HomePageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Ana sayfa"
-        
-        let backButton = UIBarButtonItem()
-        backButton.title = "Çıkış"
-        navigationItem.backBarButtonItem = backButton
+  
+   
         // Do any additional setup after loading the view.
     }
     

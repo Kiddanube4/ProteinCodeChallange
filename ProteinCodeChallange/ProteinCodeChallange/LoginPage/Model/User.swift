@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 
-class User: Object {
+class Member: Object {
     @Persisted (primaryKey: true) private var userName = ""
     @Persisted private var passWord = ""
     

@@ -46,6 +46,8 @@ class LoginViewController: UIViewController {
         }
         
         viewModel.login(userName: userName, passWord: passWord)
+        userNametextField.text = ""
+        passWordTextField.text = ""
     }
     
 
@@ -68,6 +70,9 @@ extension LoginViewController: LoginViewModelDelegate {
     func login() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let homePageviewController = storyBoard.instantiateViewController(withIdentifier: "HomePageViewController") as! HomePageViewController
+        let backButton = UIBarButtonItem()
+        backButton.title = "Çıkış"
+        navigationItem.backBarButtonItem = backButton
         navigationController?.pushViewController(homePageviewController, animated: true)
     }
     
