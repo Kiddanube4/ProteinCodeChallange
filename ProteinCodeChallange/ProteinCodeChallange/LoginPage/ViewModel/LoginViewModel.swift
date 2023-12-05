@@ -32,7 +32,7 @@ class LoginViewModel {
             })
         // Apply the new configuration
         Realm.Configuration.defaultConfiguration = config
-        realm = try! Realm()
+        realm = try! Realm(configuration: config)
         for (index, usernama) in userNames.enumerated() {
             let passWord = passwords[index]
             let newUser = Member(username: usernama, password: passWord)
